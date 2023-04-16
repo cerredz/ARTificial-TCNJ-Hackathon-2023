@@ -76,12 +76,7 @@ const Navbar = (props) => {
                    >
                        Custom Art
                    </li>
-                   <li
-                   id='nav-4'
-                   onClick={() => props.aboutArtClick()}
-                   >
-                       About ART
-                   </li>
+                   
                </ul>
            </nav>
        </header>

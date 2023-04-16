@@ -44,7 +44,7 @@ const App = (props) => {
      setImage8("url(./images/thall+fantasy4.png)")
      setTopImage("./images/tree.png")
      setMiddleImage("./images/wind.png")
-     setBottomImage("./images/pyramid.png")
+     setBottomImage("./images/bottomfantasy.jpg")
    }
 
 
@@ -62,9 +62,9 @@ const App = (props) => {
      setImage6("url(./images/etower+cubism3.png)");
      setImage7("url(./images/tcnj+cubism4.png)");
      setImage8("url(./images/thall+cubism1.png)");
-     setTopImage("./images/tree.png")
-     setMiddleImage("./images/wind.png")
-     setBottomImage("./images/pyramid.png")
+     setTopImage("./images/bottomcub.jpg")
+     setMiddleImage("./images/middlecub.png")
+     setBottomImage("./images/bottomcub2.png")
      
    }
 
@@ -83,9 +83,9 @@ const App = (props) => {
      setImage6("url(./images/etower+imp4.png)");
      setImage7("url(./images/tcnj+imp1.png)");
      setImage8("url(./images/thall+imp2.png)");
-     setTopImage("./images/tree.png")
-     setMiddleImage("./images/wind.png")
-     setBottomImage("./images/pyramid2.png")
+     setTopImage("./images/topimp.jpg")
+     setMiddleImage("./images/middleimp.jpg")
+     setBottomImage("./images/bottomimp.jpg")
    }
 
 
@@ -103,9 +103,9 @@ const App = (props) => {
      setImage6("url(./images/etower+pop2.png)");
      setImage7("url(./images/tcnj+pop4.png)");
      setImage8("url(./images/thall+pop1.png)");
-     setTopImage("./images/pop.jpg")
-     setMiddleImage("./images/wind.png")
-     setBottomImage("./images/pyramid.png")
+     setTopImage("./images/toppop.jpg")
+     setMiddleImage("./images/middlepop.jpg")
+     setBottomImage("./images/bottompop.jpg")
    }
 
 
@@ -113,6 +113,9 @@ const App = (props) => {
      setHomePage(true);
      setCustomArt(false);
      setActiveNavIndex(1);
+      setTimeout(() => {
+        window.scrollTo(0,0)
+      },300)
    }
 
 

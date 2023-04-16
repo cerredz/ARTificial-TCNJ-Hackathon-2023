@@ -94,14 +94,17 @@
     z-index: 1;
     letter-spacing: 5px;
     text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
- 
+   
  
  }
+
+ 
  
  
  .navbar-container header .logo p {
     letter-spacing: 2px;
     font-family: 'bold', sans-serif;
+    
  }
  
  
@@ -289,6 +292,21 @@
     border-radius: 40px;
     width: clamp(50%, 1000px, 80%);
     text-shadow: 0 0 .5em black;
+    
+ }
+
+ @keyframes moveUpDown {
+   0%{
+      transform: translateY(50px);
+   }
+
+   50% {
+      transform: translateY(0);
+   }
+
+   100% {
+      transform: translateY(50px);
+   }
  }
  
  
@@ -301,6 +319,9 @@
     backdrop-filter: blur(2px);
     width: 700px;
     text-shadow: 0 0 5px black;
+    animation: moveUpDown 4s ease-in-out infinite;
+    transform: translateY(50px);
+    
  }
  .art-world .welcome p span{
     font-variant: small-caps;
@@ -310,6 +331,7 @@
     margin: 15px;
     font-weight: 600;
     text-shadow: none;
+    animation: moveUpDown 4s ease-in-out infinite;
  }
  .art-world .title:nth-child(1) {
    
@@ -438,28 +460,57 @@
     text-align: center;
    
  }
+
+ @keyframes pop{
+   0%{
+      transform: translate(-50%, -50%) scale(1);
+   }
+
+   10% {
+      transform: translate(-50%, -50%) scale(1.5);
+
+   }
+
+   20% {
+      transform: translate(-50%, -50%) scale(1);
+   }
+ }
  .art-world .outer-div .top-left-title {
    
    
     font-family: 'Fantasy';
+    animation-name: pop;
+    animation-duration: 5s;
+    animation-iteration-count:infinite ;
+    
  }
  
  
  .art-world .outer-div .top-right-title {
    
     font-family: 'Cubism';
+
+    animation-name: pop;
+    animation-duration: 6s;
+    animation-iteration-count:infinite ;
  }
  
  
  .art-world .outer-div .bottom-left-title {
    
     font-family: 'Impressionism';
+    animation-name: pop;
+    animation-duration: 6.5s;
+    animation-iteration-count:infinite ;
  }
  
  
  .art-world .outer-div .bottom-right-title{
    
     font-family: 'Pop-Art';
+    animation-name: pop;
+    animation-duration: 4.5s;
+    animation-iteration-count:infinite ;
  }
  
  
@@ -490,7 +541,7 @@
  
  .custom-art-container {
     position: relative;
-    top: 80px;
+    top: 60px;
     z-index: 2;
    
  
@@ -503,9 +554,57 @@
     width: 400px;
     height: 300px;
     border: 5px solid black;
-    
-    
+    cursor: pointer;;
  }
+
+ .custom-art-container span.box:hover {
+   transform: translateY(-30px) scale(1.1);
+   
+
+ }
+
+ .custom-art-container .first:hover {
+   box-shadow: 0 0 2em #04e5f5;
+ }
+ .custom-art-container .two:hover {
+   box-shadow: 0 0 2em #0081B4;
+ }
+ .custom-art-container .three:hover {
+   box-shadow: 0 0 2em #2412e7;
+ }
+ .custom-art-container .four:hover {
+   box-shadow: 0 0 2em #DF2E38;
+ }
+ .custom-art-container .five:hover {
+   box-shadow: 0 0 2em #e00914;
+ }
+ .custom-art-container .six:hover {
+   box-shadow: 0 0 2em #e510be;
+ }
+
+ .custom-art-container .seven:hover {
+   box-shadow: 0 0 2em #e510be;
+ }
+ .custom-art-container .eight:hover {
+   box-shadow: 0 0 2em #a611e1;
+ }
+ .custom-art-container .nine:hover {
+   box-shadow: 0 0 2em #8e07e9;
+ }
+ .custom-art-container .ten:hover {
+   box-shadow: 0 0 2em #8e07e9;
+ }
+ .custom-art-container .eleven:hover {
+   box-shadow: 0 0 2em #2412e7;
+ }
+ .custom-art-container .twelve:hover {
+   box-shadow: 0 0 2em #e00914;
+ }
+
+ 
+
+
+
 
 
  .custom-art-container .first{
@@ -648,8 +747,11 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: fill 3s ease-in-out 1 forwards;
    
  }
+
+ 
  .user-art-container .row-images {
     display: flex;
     justify-content: center;

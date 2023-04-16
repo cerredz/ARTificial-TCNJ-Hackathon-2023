@@ -33,12 +33,7 @@ const MinimizedNavbar = (props) => {
                    >
                        Custom Art
                    </li>
-                   <li
-                   onClick={() => props.aboutArtClick()}
                   
-                   >
-                       About ART
-                   </li>
                </ul>
            </nav>
        </header>

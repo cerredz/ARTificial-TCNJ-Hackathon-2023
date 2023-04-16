@@ -27,7 +27,7 @@ const ArtificialWorld = (props) => {
        <div id='welcome' className='welcome'>
          <h1 className='title'><span>Welcome</span>to My World!</h1>
          <h1 className='title'>Welcome</h1>
-         <p>My Name is <span>Artificial, </span>and I use a nueral style transfer to bend reality</p>
+         <p>My Name is <span>Artificial, </span>and I use nueral style transfer to bend reality</p>
        </div>
        <div id='artificialsWorld' className='outer-div'>
          <div className='top-left inner-div'>
