@@ -1,7 +1,5 @@
 # Flask Web App featuring Neural Style Transfer
 
-https://user-images.githubusercontent.com/110927971/232319558-2b0f09fb-e740-4e32-9aa6-46ec51559c07.mp4
-
 # Technologies Used
 
 - React 
