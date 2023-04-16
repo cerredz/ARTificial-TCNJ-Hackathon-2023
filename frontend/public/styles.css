@@ -1,0 +1,757 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .5s ease-in-out;
+    font-family: 'Trench', sans-serif;
+ }
+ 
+ 
+ @font-face {
+    font-family: 'bold';
+    src: url("./fonts/SotokaromiBold-p7xny.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Trench';
+    src: url("./fonts/TrenchThin-aZ1J.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Fantasy';
+    src: url("./fonts/FantasyMagist-RpMZM.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Cubism';
+    src: url("./fonts/Dklouise-pyWv.otf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Impressionism';
+    src: url("./fonts/BrushPains-PKMmx.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ @font-face {
+    font-family: 'Pop-Art';
+    src: url("./fonts/Chomiku3DRegular-p7lEd.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ 
+ 
+ body {
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ 
+ 
+ 
+ 
+ .navbar-container {
+    position: relative;
+    top: 0;
+    z-index: 2;
+   
+ }
+ .navbar-container header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: none;
+ }
+ .navbar-container header .banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ 
+ .navbar-container header .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 9em;
+   
+    color: #ffff;
+    text-decoration: none;
+    z-index: 1;
+    letter-spacing: 5px;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+ 
+ 
+ }
+ 
+ 
+ .navbar-container header .logo p {
+    letter-spacing: 2px;
+    font-family: 'bold', sans-serif;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ .navbar-container header.sticky {
+    height: 80px;
+    transition: none;
+ }
+ 
+ 
+ .navbar-container header nav {
+    position: relative;
+    display: flex;
+    z-index: 1;
+ 
+ 
+ }
+ 
+ 
+ .navbar-container header nav ul {
+    position: relative;
+    display: flex;
+    opacity: 0;
+ }
+ 
+ 
+ .navbar-container header.sticky nav ul {
+    opacity: 1;
+    transition-delay: .75s;
+ }
+ 
+ 
+ .navbar-container header nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 15px;
+    color: #ffff;
+    font-size: 1.3em;
+    letter-spacing: 2px;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+ .navbar-container header nav ul li:nth-child(1):hover{
+    /* color: #DF2E38 */
+ 
+ 
+    background: linear-gradient(to right, #DF2e38, #e510be);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ 
+ 
+ }
+ .navbar-container header nav ul li:nth-child(2):hover{
+    background: linear-gradient(to right, #e510be, #a611e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ 
+ 
+ }
+ .navbar-container header nav ul li:nth-child(3):hover{
+    background: linear-gradient(to right, #a611e1, #2412e7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+ 
+ 
+ }
+ .navbar-container header nav ul li:nth-child(4):hover{
+    background: linear-gradient(to right, #2412e7, #11a6eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+ }
+ 
+ 
+ .navbar-container header.sticky .logo {
+    display: none;
+ }
+ 
+ 
+ .navbar-container header.sticky .robot {
+    position: absolute;
+    filter: grayscale(100%);
+    width: 40px;
+    left: 50px;
+    margin: auto 0;
+ }
+ 
+ 
+ .navbar-container header.sticky .banner {
+    
+ 
+ 
+ }
+ 
+ 
+ /* Underline li Hover Effects */
+ 
+ 
+ .navbar-container header nav ul li::before {
+    content: '';
+    position: absolute;
+    top: calc(100% - 2px);
+    height: 2px;
+    bottom: 0;
+    width: 0;
+    left: 0;
+    transition: .5s ease-in-out;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ .navbar-container header nav ul li:hover::before {
+    width: 100%;
+ }
+ 
+ 
+ .navbar-container header nav ul li:nth-child(1):hover::before {
+    background: linear-gradient(to right, #DF2E38, #e510be, #e510be);
+ }
+ 
+ 
+ .navbar-container header nav ul li:nth-child(2):hover::before {
+    background: linear-gradient(to right, #e510be, #a611e1);
+ }
+ 
+ 
+ .navbar-container header nav ul li:nth-child(3):hover::before {
+    background: linear-gradient(to right, #a611e1, #2412e7);
+ }
+ 
+ 
+ .navbar-container header nav ul li:nth-child(4):hover::before {
+    background: linear-gradient(to right, #2412e7, #11a6eb);
+ }
+ /* Artificial's World Css*/
+ 
+ 
+ .art-world {
+    position: relative;
+    top: 80px;
+    z-index: 0;
+    color: white;
+   
+ }
+ .art-world .welcome {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: url("./images/background2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
+ }
+ 
+ 
+ .outer-div {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+ }
+ 
+ 
+ .art-world .title {
+    margin: 50px auto;
+    top: 200px;
+    transform:translateY(150px);
+    text-align:center;
+    font-size: 6em;
+    letter-spacing: 3px;
+    color: white;
+    border-radius: 40px;
+    width: clamp(50%, 1000px, 80%);
+    text-shadow: 0 0 .5em black;
+ }
+ 
+ 
+ .art-world .welcome p {
+    margin: 20px auto;
+    font-size: 3em;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+    backdrop-filter: blur(2px);
+    width: 700px;
+    text-shadow: 0 0 5px black;
+ }
+ .art-world .welcome p span{
+    font-variant: small-caps;
+    background: linear-gradient(to right, #ff0000, #a611e1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 15px;
+    font-weight: 600;
+    text-shadow: none;
+ }
+ .art-world .title:nth-child(1) {
+   
+    backdrop-filter: blur(2px);
+ }
+ .art-world .title span {
+    background: -webkit-linear-gradient(45deg, #e510be, #11a6eb);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 3px transparent;
+    color: white;
+    margin: 0 20px;
+   
+ 
+ 
+ }
+ 
+ 
+ .art-world .title:nth-child(2) {
+    background-image: linear-gradient(to right, #ff0000, #0081B4);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: translateY(5%) translateX(-26.85%);
+    animation: wave 5s ease-in-out infinite;
+ 
+ 
+ }
+ 
+ 
+ @keyframes wave {
+    0%, 100%
+  {
+    clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%)
+  }
+  50%
+  {
+    clip-path: polygon(0 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 40%, 100% 100%, 0% 100%)
+  }
+ }
+ 
+ 
+ .art-world .inner-div {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+ }
+ 
+ 
+ .art-world .top-left{
+ 
+ 
+   
+    top: 0;
+    left: 0;
+    background: url("./images/fantasy.png");
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+ 
+ 
+ }
+ 
+ 
+ 
+ 
+ .art-world .top-right {
+    top: 0%;
+    right: 0;
+    z-index: 1;
+    display: inline-block;
+    background: url("./images/cubism.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top: 3px solid black;
+ }
+ 
+ 
+ .art-world .bottom-left {
+   
+    bottom: 0;
+    left: 0;
+ 
+ 
+    background: url("./images/impressionalism.png");
+    z-index: 1;   
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+ }
+ 
+ 
+ .art-world .bottom-right {
+    bottom: 0;
+    right: 0;
+    background: url("./images/popart.png");
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+ }
+ .art-world .outer-div .sub-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    letter-spacing: 5px;
+    background: rgba(255,255,255,.1);
+    backdrop-filter: blur(2px);
+    font-size: 2em;
+    text-shadow: 0 0 5px black;
+    cursor: pointer;
+    padding: 15px 20px 5px 20px;
+    max-width: 800px;
+    min-width: 500px ;
+    text-align: center;
+   
+ }
+ .art-world .outer-div .top-left-title {
+   
+   
+    font-family: 'Fantasy';
+ }
+ 
+ 
+ .art-world .outer-div .top-right-title {
+   
+    font-family: 'Cubism';
+ }
+ 
+ 
+ .art-world .outer-div .bottom-left-title {
+   
+    font-family: 'Impressionism';
+ }
+ 
+ 
+ .art-world .outer-div .bottom-right-title{
+   
+    font-family: 'Pop-Art';
+ }
+ 
+ 
+ .art-world .outer-div .top-left-title:hover {
+    color: #ff0000
+ }
+ 
+ 
+ .art-world .outer-div .top-right-title:hover {
+    color:#a611e1
+ }
+ 
+ 
+ .art-world .outer-div .bottom-left-title:hover{
+    color: #2412e7;
+   
+ }
+ 
+ 
+ .art-world .outer-div .bottom-right-title:hover{
+    color: #e510be;
+   
+ }
+ 
+ 
+ /* Custom Art Page Css*/
+ 
+ 
+ .custom-art-container {
+    position: relative;
+    top: 80px;
+    z-index: 2;
+   
+ 
+ 
+ }
+ .custom-art-container span {
+    margin: 10px;
+ }
+ .custom-art-container span.box {
+    width: 400px;
+    height: 300px;
+    border: 5px solid black;
+    
+    
+ }
+
+
+ .custom-art-container .first{
+    background: url("./images/NYC.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .custom-art-container .second {
+    background: url("./images/etower.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .custom-art-container .third {
+    background: url("./images/tcnj.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ .custom-art-container .fourth {
+    background: url("./images/thall.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+
+ .custom-art-container .fifth {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+ }
+ 
+ 
+ 
+ .custom-art-container span.symbol {
+    font-size: 100px;
+    color: white;
+    font-weight: 800;
+ 
+ 
+ }
+ .custom-art-container .top-container {
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+ }
+ 
+ 
+ .custom-art-container .middle-container {
+    position: relative;
+    height: 100vh;
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+ }
+ 
+ 
+ .custom-art-container .bottom-container {
+    
+    position: relative;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ }
+ 
+ 
+ .custom-art-container .row-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ 
+ .custom-art-container .shift-up {
+    transform: translateY(-80px);
+ }
+ 
+ 
+ .custom-art-container .double-shift-up {
+    transform: translateY(-450px);
+ }
+ 
+ 
+ .custom-art-container .last-shift-up {
+    transform: translateY(-275px);
+ }
+ 
+ 
+ .custom-art-container h1 {
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    letter-spacing: 3px;
+   
+    text-shadow: 0 0 5px black;
+   
+ }
+ .custom-art-container h1.top-title {
+    padding-top: 30px;
+ }
+ 
+ 
+ .custom-art-container h1.bottom-title {
+    margin-bottom: 100px;
+    letter-spacing: 5px;
+ }
+ 
+ 
+ /* User Art Page CSS*/
+ 
+ 
+ .user-art-container {
+    position: relative;
+    top: 75px;
+    height: 100vh;
+    background: url("./images/galaxy2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 3px solid black;
+ 
+ 
+ }
+ 
+ 
+ .user-art-container .title {
+    text-align: center;
+    padding: 50px 10px;
+    font-size: 4em;
+    letter-spacing: 4px;
+    background: linear-gradient(to right, #fa03cd, #04e5f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+   
+ }
+ .user-art-container .row-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+ }
+ .user-art-container input {
+    width: 400px;
+    height: 300px;
+    border: 5px solid black;
+    background: white;
+    cursor: pointer;
+    text-align: center;
+ }
+ 
+ 
+ .user-art-container .row-images span {
+    font-size: 100px;
+    color: white;
+    margin: 0 15px;
+ }
+ 
+ 
+ .user-art-container .row-images .img {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    transform: translateX(-100%) translateY(-50%);
+    box-shadow: 0 0 2em rgba(255,255,255,.3);
+ }
+ 
+ 
+ .user-art-container .button-container {
+    margin-top: 50px;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+ .user-art-container .button-container .generate-btn {
+   
+    padding: 15px 30px;
+    border-radius: 30px;
+    letter-spacing: 4px;
+    font-size: 2em;
+    background: #04e5f5;
+    box-shadow: 0 0 1em #04e5f5;
+    font-weight: 800;
+    font-variant: small-caps;
+    border: none;
+    cursor: pointer;
+    
+    
+}
+
+
+ 
+ 
+ .user-art-container .button-container .generate-btn:hover {
+    scale: 1.2;
+    box-shadow: 0 0 3em #04e5f5;
+}
+ 
+ 
+ .user-art-container .row-images .final-image {
+    height: 300px;
+    width: 400px;
+    border: 5px solid black;
+    background: white;
+}
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
