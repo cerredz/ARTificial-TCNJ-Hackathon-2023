@@ -20,6 +20,11 @@ Website and ai program presentation ->  https://www.youtube.com/watch?v=T96sFK6n
 7. In another tab, CD into the /frontend folder and type "npm start" to start the React application
 8. The website should automatically appear and you are good to go
 
+# Website Preview 🎬 
+
+https://user-images.githubusercontent.com/110927971/233229435-3cbe89f0-41f8-4099-b0a6-6b536dc3deee.mp4
+
+
 
 
 
